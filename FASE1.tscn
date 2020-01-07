@@ -5,18 +5,20 @@
 [ext_resource path="res://Assets/Tile_rock.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 17.6108, 15.2349 )
+extents = Vector2( 17.6108, 13.3756 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 53.7703 )
+extents = Vector2( 10, 50.1005 )
 
 [node name="World" type="Node2D"]
 
 [node name="Player" type="KinematicBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 59.8783, -50.5752 )
 scale = Vector2( 2.56, 2.56 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource( 1 )
@@ -27,6 +29,9 @@ texture = ExtResource( 2 )
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2( 36.4297, 614.787 )
 scale = Vector2( -2.99137, 1.53566 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Floor"]
 texture = ExtResource( 3 )
